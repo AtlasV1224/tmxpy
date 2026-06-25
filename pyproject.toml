@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tmxpy"
-version = "0.2.6"
+version = "0.2.7"
 authors = [
   { name="AnotherPillow", email="programming@pillow.rocks" }
 ]
