@@ -118,7 +118,7 @@ class TMXpy:
         self.tmxDimensions = (int(map['width']), int(map['height']))
 
         self.spriteSheetFolderPaths = sheets
-        self._sheet_cache: dict[str, Image.Image] = {}  # AV: Caching to reduce disk reads and speed up processing
+        self._sheet_cache: dict[str, Image.Image] = {}  # Caching tilesheets to reduce disk reads and speed up processing
 
     
     def generateGIDDict(self) -> None:
@@ -180,7 +180,7 @@ class TMXpy:
             
             raise Exception(f"TMXpy: Tile {gid} not found in tileset")
 
-        # AV: Uses cached sheet when possible to reduce disk reads and increase speed
+        # Uses cached sheet when possible to reduce disk reads and increase speed
         path = self.findPathOfTileSheet(tile["src"], ".png")
         if path not in self._sheet_cache:
             self._sheet_cache[path] = Image.open(path).convert("RGBA")
