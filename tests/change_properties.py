@@ -10,4 +10,4 @@ tmx = TMXpy(
 tmx.generateMapPropertiesDict()
 tmx.properties['asdf'] = 'ghjk'
 
-tmx.save(f'tests\\Farm-properties-changed.tmx')
+tmx.save(Path("tests") / "Farm-properties-changed.tmx")

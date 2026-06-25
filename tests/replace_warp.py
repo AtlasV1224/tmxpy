@@ -19,7 +19,7 @@ for x in ['Farm']:
         "dest_y": 8,
     })
 
-    tmx.save(f'tests\\{x}-warp-replaced.tmx')
+    tmx.save(Path("tests") / f"{x}-warp-replaced.tmx")
         
 
 

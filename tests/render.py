@@ -15,7 +15,7 @@ from .common import MAP_PATH
 def farm():
     tmx = TMXpy(
         [Path(MAP_PATH)],
-        path="tests\\Farm.tmx")
+        path=Path("tests") / "Farm.tmx")
                 
     #print(tmx.__dict__)
 
@@ -26,7 +26,7 @@ def farm():
     # print(randomlySelectedTile)
 
     #tmx.renderLayer(1).save("tests\\render.png")
-    tmx.renderAllLayers().save("tests\\render-farm.png")
+    tmx.renderAllLayers().save(Path("tests") / "render-farm.png")
 
 
 def render(name: str):
@@ -43,7 +43,7 @@ def render(name: str):
     # print(randomlySelectedTile)
 
     #tmx.renderLayer(1).save("tests\\render.png")
-    tmx.renderAllLayers(blocked=['Paths']).save(f"tests\\render-{name}.png")
+    tmx.renderAllLayers(blocked=['Paths']).save(Path("tests") / f"render-{name}.png")
 
 #for x in ['AnimalShop', 'Beach', 'Darkroom', 'Desert', 'Town', 'Farm', 'FarmCave']:
 for x in ['Farm']:

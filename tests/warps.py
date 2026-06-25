@@ -37,7 +37,7 @@ def recursive_get_warps(name: str, source: dict = {
 # for x in ['Farm', 'Island_W']:
 for x in ['Island_W']:
     w = recursive_get_warps(x)
-    with open(f'tests\\warps-{x}.json', 'w') as f:
+    with open(Path("tests") / f"warps-{x}.json", 'w') as f:
         json.dump(w, f, indent=4)
         print(f'Wrote {len(w)} warps to tests\\warps-{x}.json')
         

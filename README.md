@@ -48,4 +48,5 @@ Further examples can be found in the [tests](https://github.com/AnotherPillow/tm
 
 - Install dependencies with `pip install -r requirements.txt`
 - Tests can be added to tests/name_of_test.py and run with `py -m tests.name_of_test`
+- If not on Windows or if using a non-default Stardew Valley install location, update `test/common.py` 
 - It can be built with `py -m build`
